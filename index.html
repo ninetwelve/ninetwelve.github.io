@@ -1,25 +1,111 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>912</title>
-		<meta charset="UTF-8" />
+		<title>Ninetwelve - CraftCMS addons etcetera</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" value="Ninetwelve creates addons and other goodness for CraftCMS, by Anthony Colangelo and Matt Stauffer.">
 		<style>
+
+		*, *:before, *:after {
+			-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		a {
+			color: rgba(36, 105, 55, 1.0);
+			text-decoration: none;
+		}
+
 		body {
-			max-width: 90%;
-			margin: 0 auto;
-			font: 16px "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
 			color: #444;
+			font: 16px "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+			max-width: 90%;
+		}
+
+		.container {
+			margin: 0 auto;
+			max-width: 500px;
 		}
 
 		.logo {
 			display: block;
+			max-width: 300px;
+			margin: 5em auto 0;
 			width: 80%;
-			max-width: 500px;
-			margin: 10% auto 0;
 		}
+
+		.profile-pics {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		.profile-pic-wrapper {
+			float: left;
+			margin: 2em 2.5%;
+			text-align: center;
+			width: 45%;
+		}
+			.profile-pic-wrapper i {
+				font-size: 80%;
+				font-style: italic;
+				opacity: 0.6;
+			}
+		.profile-pic {
+			border: 0.25em solid #eee;
+			border-radius: 50%;
+			-webkit-transition: -webkit-filter 250ms linear, border-color 250ms linear;
+			transition:                 filter 250ms linear, border-color 250ms linear;
+			transition:         -webkit-filter 250ms linear, border-color 250ms linear;
+		}
+		.profile-pic-wrapper a:hover .profile-pic {
+			border-color: #bbb;
+			-webkit-filter: brightness(1.15);
+			filter: brightness(1.15);
+		}
+			@media only screen and (min-width: 550px) {
+				.profile-pic-wrapper {
+					margin: 3em 5%;
+					width: 40%;
+				}
+				.profile-pic {
+					border-width: 0.5em;
+				}
+			}
+
+			@media only screen and (max-height: 400px) {
+				.logo {
+					margin-top: 1em;
+					max-width: 175px;
+				}
+				.profile-pic-wrapper {
+					margin-top: -2em;
+				}
+			}
 		</style>
 	</head>
 	<body>
-		<img src="ninetwelve.svg" alt="912" onerror="this.src='ninetwelve.png'" class="logo" />
+		<div class="container">
+			<img src="ninetwelve.svg" alt="912" onerror="this.src='ninetwelve.png'" class="logo">
+			<ul class="profile-pics">
+				<li class="profile-pic-wrapper">
+					<a href="http://www.acolangelo.com/">
+						<img src="anthony.jpg" alt="" class="profile-pic"><br>
+						Anthony Colangelo<br>
+						<i>(of Happy Cog)</i>
+					</a>
+				</li>
+				<li class="profile-pic-wrapper">
+					<a href="http://www.mattstauffer.co/">
+						<img src="matt.jpg" alt="" class="profile-pic"><br>
+						Matt Stauffer<br>
+						<i>(of Tighten Co.)</i>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</body>
 </html>
